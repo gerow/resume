@@ -1,0 +1,199 @@
+\documentclass[10pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Michael Gerow}
+\newcommand{\addr}{1006 W $23^{rd}$ St, Los Angeles, CA 90007}
+\newcommand{\phone}{918-740-1775}
+\newcommand{\email}{gerow@usc.edu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+\newcommand{\resshortbigitem}[2]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newenvironment{resshortsubsec}[2]{
+	\resshortbigitem{#1}{#2}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{University of Southern California}{Los Angeles, CA}{Majoring in Computer Engineering and Computer Science}
+		\ressubitem{University GPA:  3.52, Major GPA: 4.0}
+		\ressubitem{Presidential Scholar}
+		\ressubitem{Projected Graduation Date:  May, 2014}
+	\end{ressubsec}
+	\begin{resshortsubsec}{Bishop Kelley High School}{Tulsa, OK}{}
+		\ressubitem{GPA unweighted: 3.65, GPA weighted: 4.23}
+		\ressubitem{Graduation Date: May, 2010}
+	\end{resshortsubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ressection}{Relevant coursework}
+	%\resshortbigitem{Computer Science 101}{Introduction to Computer Science}
+	%\resshortbigitem{Computer Science 102}{Data Structures}
+	%\resshortbigitem{Electrical Engineering 101}{Introduction to Digital Logic}
+	\resshortbigitem{Compuer Science 200}{Object-Oriented Programming}
+	\resshortbigitem{Computer Science 480}{Computer Graphics}
+	\resshortbigitem{Electrical Engineering 201}{Introduction to Digital Circuits}
+	\resshortbigitem{\emph{In Progress:} Electrical Engineering 357}{Computer Architecture}
+	\resshortbigitem{\emph{In Progress:} Computer Science 201}{Software Development}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+	\begin{comment}
+	\begin{ressubsec}{Car Country}{Tulsa, OK}{Currier December 2010--January 2011 (Winter Break)}
+		\ressubitem{Transported documents and payments to and from businesses and banks.}
+	\end{ressubsec}
+	\end{comment}
+	\begin{ressubsec}{Nelson Auto Group}{Tulsa, OK}{Information Technology Intern May 2011--August 2011, December 2011--January 2012}
+		\ressubitem{Created a system to effectively and efficiently keep copies of all physical media needed for the company's computer and technical systems.}
+		\ressubitem{Created a system to allow managers to easily access recorded calls through a web interface using PHP to access Asterisk servers.}
+	\end{ressubsec}
+	\begin{ressubsec}{Christ the King Parish}{Tulsa, OK}{Maintainance:  March 2008--August 2010}
+		\ressubitem{Ensured proper upkeep of church and affiliated school, helped facilitate events, and repaired utilities.}
+	\end{ressubsec}
+	
+	\begin{comment}
+	\begin{ressubsec}{Tulsa Day Center For the Homeless}{Tulsa, OK}{Volunteer:  July 2006--September 2009}
+		\ressubitem{Worked mainly with individuals receiving tuberculosis tests.}
+		\ressubitem{Entered tuberculosis data and kept computerized records between the Day Center for the Homeless and the Tulsa City-County Health Department up to date.}
+	\end{ressubsec}
+	\end{comment}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+	\resitem{\textbf{Languages:} C, C++, Java, Python, Verilog, \LaTeX, Unix Shell Scripting, PHP, SQL }
+	\resitem{\textbf{Libraries/Frameworks:} OpenGL, ROS (Robot Operating System), OpenCV }
+	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Eclipse, Active Directory, Trixbox (Asterisk based PBX), Apache, Unity }
+	
+\end{ressection}
+
+\begin{ressection}{Interests}
+	\resitem{\textbf{Game Development:}  Currently working on a project to create a 2d game engine in Java using OpenGL.  Hope to eventually use the engine to make some kind of Metroid inspired platformer.  Also working with a team of four other people on a project to create a real time strategy game using the Unity game engine.}
+	\resitem{\textbf{\LaTeX and Typesetting:} Working on an application called Baseline which is intended to allow more people to take advantage of the power of \LaTeX without needing to learn all the markup.} 
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements}
+
+	%\resitem{Currently a member of the software team for USC's Seabee3 underwater autonomous robot working with computer vision algorithms.}
+
+	\resitem{National Merit Scholar.}
+	
+	\resitem{Created a factory simulation with a team of 18 people for a class project in CS200.}
+	
+	\resitem{Head of Bishop Kelley High School robotics electrical/software team during 2010.}
+
+\end{ressection}
+
+
+\end{document}
