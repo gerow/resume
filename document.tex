@@ -14,9 +14,9 @@
 
 % Name and contact information
 \newcommand{\name}{Michael Gerow}
-\newcommand{\addr}{1006 W $23^{rd}$ St, Los Angeles, CA 90007}
 \newcommand{\phone}{918-740-1775}
 \newcommand{\email}{gerow@usc.edu}
+\newcommand{\linkedin}{http://www.linkedin.com/in/gerow}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,7 +24,7 @@
 
 % This defines how the name looks
 \newcommand{\bigname}[1]{
-	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+	\begin{center}\fontfamily{phv}\selectfont\Large\scshape#1\end{center}
 }
 
 % A ressection is a main section (<H1>Section</H1>)
@@ -35,6 +35,13 @@
 	\vspace{3pt}
 }{
 	\end{itemize}
+}
+
+\newcommand{\resplainsection}[1]{
+	{\fontfamily{phv}\selectfont\Large#1}
+	\vspace{-12pt}
+	\\
+
 }
 
 % A resitem is a simple list element in a ressection (first level)
@@ -106,33 +113,31 @@
 
 \vspace{-8pt} \rule{\textwidth}{1pt}
 
-\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+\vspace{-1pt} {\small\itshape \email; \linkedin \hfill \phone}
 
 \vspace{8 pt}
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%
+\resplainsection{Professional Summary}
+	A National Scholar Computer Engineering and Computer Science student at USC with over four years of programming experience and nearly a year of experience working in a professional setting including working on internal IT applications and embedded set top box applications.  A two year member of the USC Autonomous Underwater Vehicle team competing in the AUVSI RoboSub event.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education}
 
 	\begin{ressubsec}{University of Southern California}{Los Angeles, CA}{Majoring in Computer Engineering and Computer Science}
-		\ressubitem{University GPA:  3.5, Major GPA: 3.8}
+		\ressubitem{University GPA:  3.5, Major GPA: 3.9}
 		\ressubitem{Presidential Scholar}
 		\ressubitem{Projected Graduation Date:  May, 2014}
 	\end{ressubsec}
-	\begin{resshortsubsec}{Bishop Kelley High School}{Tulsa, OK}{}
-		\ressubitem{GPA unweighted: 3.7, GPA weighted: 4.2}
-		\ressubitem{Graduation Date: May, 2010}
-	\end{resshortsubsec}
 
 \end{ressection}
 
-\begin{ressection}{Skills}
+\begin{ressection}{Technical Summary}
 
 	\resitem{\textbf{Languages:} C, C++, Java, Python, Verilog, \LaTeX, Unix Shell Scripting, PHP, SQL, Motorola 68000 Assembly, Lua }
-	\resitem{\textbf{Libraries/Frameworks:} OpenGL, ROS (Robot Operating System), OpenCV }
-	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, Eclipse, Active Directory, Trixbox (Asterisk based PBX), Apache, Unity, VMWare ESX, Multithreaded Environments (Using Agents), Maven }
+	\resitem{\textbf{Libraries/Frameworks:} OpenGL, ROS (Robot Operating System), OpenCV, Berkeley Sockets }
+	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, Eclipse, Trixbox (Asterisk based PBX), Apache, VMWare ESX, Multithreaded Environments (Using Agents), Maven }
 	
 \end{ressection}
 
@@ -141,7 +146,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Experience}
+\begin{ressection}{Professional Experience}
 	\begin{comment}
 	\begin{ressubsec}{Car Country}{Tulsa, OK}{Currier December 2010--January 2011 (Winter Break)}
 		\ressubitem{Transported documents and payments to and from businesses and banks.}
@@ -173,39 +178,40 @@
 	%\resshortbigitem{Computer Science 101}{Introduction to Computer Science}
 	%\resshortbigitem{Computer Science 102}{Data Structures}
 	%\resshortbigitem{Electrical Engineering 101}{Introduction to Digital Logic}
+	\resshortbigitem{\emph{In Progress:} Computer Science 271}{Discrete Mathematics}
+	\resshortbigitem{\emph{In Progress:} Electrical Engineering 450}{Networking}
+	\resshortbigitem{\emph{In Progress:} Electrical Engineering 457}{Computer System Organization}
+	\resshortbigitem{Computer Science 201}{Software Development}
+	\resshortbigitem{ Electrical Engineering 357}{Computer Architecture}
 	\resshortbigitem{Compuer Science 200}{Object-Oriented Programming}
 	\resshortbigitem{Computer Science 480}{Computer Graphics}
 	\resshortbigitem{Electrical Engineering 201}{Introduction to Digital Circuits}
-	\resshortbigitem{ Electrical Engineering 357}{Computer Architecture}
-	\resshortbigitem{Computer Science 201}{Software Development}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\begin{ressection}{Interests}
-	\begin{comment}
-	\resitem{\textbf{Game Development:}  Currently working on a project to create a 2d game engine in Java using OpenGL.  Hope to eventually use the engine to make some kind of Metroid inspired platformer.  Also working with a team of four other people on a project to create a real time strategy game using the Unity game engine.}
-	\resitem{\textbf{Typesetting:} Working on an application called Baseline which is intended to allow more people to take advantage of the power of \LaTeX without needing to learn all the markup.} 
-	\resitem{\textbf{Amateur Radio:}  A federally licensed amateur radio operator.}
-	\end{comment}
-	\resitem{\textbf{Robotics:} Currently a member of USC's robotics team working on vision processing for an autonomous underwater vehicle}
-\end{ressection}
-
+%\begin{ressection}{Interests}
+%	\begin{comment}
+%	\resitem{\textbf{Game Development:}  Currently working on a project to create a 2d game engine in Java using OpenGL.  Hope to eventually use the engine to make some kind of %Metroid inspired platformer.  Also working with a team of four other people on a project to create a real time strategy game using the Unity game engine.}
+%	\resitem{\textbf{Typesetting:} Working on an application called Baseline which is intended to allow more people to take advantage of the power of \LaTeX without needing to learn all %the markup.} 
+%	\resitem{\textbf{Amateur Radio:}  A federally licensed amateur radio operator.}
+%	\end{comment}
+%	\resitem{\textbf{Robotics:} Currently a member of USC's robotics team working on vision processing for an autonomous underwater vehicle}
+%\end{ressection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Achievements}
+%\begin{ressection}{Achievements}
 
 	%\resitem{Currently a member of the software team for USC's Seabee3 underwater autonomous vehicle working with computer vision.}
 
-	\resitem{National Merit Scholar.}
+%	\resitem{National Merit Scholar.}
 	
-	\resitem{Created a factory simulation with a team of 18 people for a class project.}
+%	\resitem{Created a factory simulation with a team of 18 people for a class project.}
 	
 	%\resitem{Head of Bishop Kelley High School robotics electrical/software team during 2010.}
 
-\end{ressection}
+%\end{ressection}
 
 
 \end{document}
