@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{verbatim}
+\usepackage{hyperref}
 
 \pagestyle{empty}
 \geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
@@ -17,6 +18,7 @@
 \newcommand{\phone}{918-740-1775}
 \newcommand{\email}{gerow@usc.edu}
 \newcommand{\linkedin}{http://www.linkedin.com/in/gerow}
+\newcommand{\website}{http://mgerow.com}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,6 +75,12 @@
 	\textbf{#1}---#2
 }
 
+\newcommand{\resveryshortbigitem}[1]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}
+}
+
 % This is a list that comes with a resbigitem
 \newenvironment{ressubsec}[3]{
 	\resbigitem{#1}{#2}{#3}
@@ -88,6 +96,14 @@
 	\begin{itemize}
 }{
 	\end{itemize}
+}
+
+\newenvironment{resveryshortsubsec}[1]{
+	\resveryshortbigitem{#1}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+    \end{itemize}
 }
 
 % This is a simple sublist
@@ -113,7 +129,7 @@
 
 \vspace{-8pt} \rule{\textwidth}{1pt}
 
-\vspace{-1pt} {\small\itshape \email; \linkedin \hfill \phone}
+\vspace{-1pt} {\small\itshape \email; \linkedin \hfill \website; \phone}
 
 \vspace{8 pt}
 
@@ -135,9 +151,9 @@
 
 \begin{ressection}{Technical Summary}
 
-	\resitem{\textbf{Languages:} C, C++, Java, Python, Verilog, \LaTeX, Motorola 68000 Assembly }
+	\resitem{\textbf{Languages:} C, C++, Java, Go, Python, Verilog, \LaTeX, Motorola 68000 Assembly }
 	\resitem{\textbf{Libraries/Frameworks:} OpenGL, ROS (Robot Operating System), OpenCV, Berkeley Sockets }
-	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, Eclipse, Multithreaded Environments (Using Agents)}
+	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, MongoDB, MySQL, Eclipse, Multithreaded Environments (Using Agents)}
 	
 \end{ressection}
 
@@ -147,11 +163,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Professional Experience}
-	\begin{comment}
-	\begin{ressubsec}{Car Country}{Tulsa, OK}{Currier December 2010--January 2011 (Winter Break)}
-		\ressubitem{Transported documents and payments to and from businesses and banks.}
-	\end{ressubsec}
-	\end{comment}
+	%\begin{ressubsec}{Car Country}{Tulsa, OK}{Currier December 2010--January 2011 (Winter Break)}
+	%	\ressubitem{Transported documents and payments to and from businesses and banks.}
+	%\end{ressubsec}
 	\begin{ressubsec}{DIRECTV}{El Segundo, CA}{Software Engineering Intern May 2012--August 2012}
 		\ressubitem{Embedded systems work with set top box UI in Java}
 		\ressubitem{Created tool to increase productivity when working with set top box assets}
@@ -175,25 +189,40 @@
 \end{ressection}
 
 \begin{ressection}{Club Experience}
-	\begin{ressubsec}{USC Autonomous Underwater Vehicle Team}{Los Angeles, CA}{Member of Software Team September 2010--Present}
+	\begin{ressubsec}{USC Autonomous Underwater Vehicle Team}{Los Angeles, CA}{Member of Software Team September 2010--May 2012}
 		\ressubitem{Wrote C++ code for robot running within the ROS environment under Ubuntu.}
 		\ressubitem{Gained experience working with vision processing using OpenCV.}
 	\end{ressubsec}
 \end{ressection}
 
-\begin{ressection}{Relevant coursework}
+\begin{ressection}{Projects Outside of School}
+    \begin{resveryshortsubsec}{Projects Created/Forked}
+        \ressubitem{\emph{Boop}: Lightweight Go server for running commands in response HTTP actions.  Very good for throwing together quick solutions when needed. \url{https://github.com/gerow/boop}}
+        \ressubitem{\emph{gnome-shell-google-calendar}: Fork of script to allow Google Calendar integration into GNOME 3. Added ability to use within GNOME 3 under Ubuntu. \url{https://github.com/gerow/gnome-shell-google-calendar}}
+        \ressubitem{\emph{btcreg}: A service for aliasing bitcoin addresses agains email addresses. Mainly created in order to play around with creating database driven web applications using Go and MongoDB.  \url{https://github.com/gerow/btcreg}}
+        \ressubitem{\emph{This Resume}: Yes, even this resume is written in \LaTeX. \url{https://github.com/gerow/resume}}
+    \end{resveryshortsubsec}
+    \begin{resveryshortsubsec}{Projects Done With Others}
+        \ressubitem{\emph{LittleNote}: An iPhone app for sending notes to your significant other.  Worked on backend side implemented as a Ruby on Rails application. \url{https://github.com/kcbarry/LittleNoteWeb}}
+    \end{resveryshortsubsec}
+    \begin{resveryshortsubsec}{Projects Contributed To}
+        \ressubitem{\emph{Goose}: Database migration tool for Go. Added sqlite3 support. Currently working on support for applications that wish to target multiple database types. \url{https://bitbucket.org/liamstask/goose}}
+    \end{resveryshortsubsec}
+\end{ressection}
+
+%\begin{ressection}{Relevant coursework}
 	%\resshortbigitem{Computer Science 101}{Introduction to Computer Science}
 	%\resshortbigitem{Computer Science 102}{Data Structures}
 	%\resshortbigitem{Electrical Engineering 101}{Introduction to Digital Logic}
-	\resshortbigitem{\emph{In Progress:} Computer Science 271}{Discrete Mathematics}
-	\resshortbigitem{\emph{In Progress:} Electrical Engineering 450}{Networking}
-	\resshortbigitem{\emph{In Progress:} Electrical Engineering 457}{Computer System Organization}
-	\resshortbigitem{Computer Science 201}{Software Development}
-	\resshortbigitem{ Electrical Engineering 357}{Computer Architecture}
-	\resshortbigitem{Compuer Science 200}{Object-Oriented Programming}
-	\resshortbigitem{Computer Science 480}{Computer Graphics}
-	\resshortbigitem{Electrical Engineering 201}{Introduction to Digital Circuits}
-\end{ressection}
+%	\resshortbigitem{\emph{In Progress:} Computer Science 271}{Discrete Mathematics}
+%	\resshortbigitem{\emph{In Progress:} Electrical Engineering 450}{Networking}
+%	\resshortbigitem{\emph{In Progress:} Electrical Engineering 457}{Computer System Organization}
+%	\resshortbigitem{Computer Science 201}{Software Development}
+%	\resshortbigitem{ Electrical Engineering 357}{Computer Architecture}
+%	\resshortbigitem{Compuer Science 200}{Object-Oriented Programming}
+%	\resshortbigitem{Computer Science 480}{Computer Graphics}
+%	\resshortbigitem{Electrical Engineering 201}{Introduction to Digital Circuits}
+%\end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
