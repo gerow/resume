@@ -5,7 +5,7 @@
 \usepackage{hyperref}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=.3in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -16,9 +16,9 @@
 % Name and contact information
 \newcommand{\name}{Michael Gerow}
 \newcommand{\phone}{918-740-1775}
-\newcommand{\email}{gerow@usc.edu}
-\newcommand{\linkedin}{http://www.linkedin.com/in/gerow}
-\newcommand{\website}{http://mgerow.com}
+\newcommand{\email}{\href{mailto:gerow@usc.edu?subject=Hello}{gerow@usc.edu}}
+\newcommand{\linkedin}{\href{http://www.linkedin.com/in/gerow}{http://www.linkedin.com/in/gerow}}
+\newcommand{\website}{\href{http://mgerow.com}{http://mgerow.com}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -188,13 +188,6 @@
 
 \end{ressection}
 
-\begin{ressection}{Club Experience}
-	\begin{ressubsec}{USC Autonomous Underwater Vehicle Team}{Los Angeles, CA}{Member of Software Team September 2010--May 2012}
-		\ressubitem{Wrote C++ code for robot running within the ROS environment under Ubuntu.}
-		\ressubitem{Gained experience working with vision processing using OpenCV.}
-	\end{ressubsec}
-\end{ressection}
-
 \begin{ressection}{Projects Outside of School}
     \begin{resveryshortsubsec}{Projects Created/Forked}
         \ressubitem{\emph{Boop}: Lightweight Go server for running commands in response HTTP actions.  Very good for throwing together quick solutions when needed. \url{https://github.com/gerow/boop}}
@@ -208,6 +201,13 @@
     \begin{resveryshortsubsec}{Projects Contributed To}
         \ressubitem{\emph{Goose}: Database migration tool for Go. Added sqlite3 support. Currently working on support for applications that wish to target multiple database types. \url{https://bitbucket.org/liamstask/goose}}
     \end{resveryshortsubsec}
+\end{ressection}
+
+\begin{ressection}{Club Experience}
+	\begin{ressubsec}{USC Autonomous Underwater Vehicle Team}{Los Angeles, CA}{Member of Software Team September 2010--May 2012}
+		\ressubitem{Wrote C++ code for robot running within the ROS environment under Ubuntu.}
+		\ressubitem{Gained experience working with vision processing using OpenCV.}
+	\end{ressubsec}
 \end{ressection}
 
 %\begin{ressection}{Relevant coursework}
