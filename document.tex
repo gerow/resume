@@ -1,11 +1,11 @@
-\documentclass[10pt,oneside]{article}
+\documentclass[8pt,oneside]{article}
 \usepackage{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{verbatim}
 \usepackage{hyperref}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -16,7 +16,7 @@
 % Name and contact information
 \newcommand{\name}{Michael Gerow}
 \newcommand{\phone}{918-740-1775}
-\newcommand{\email}{\href{mailto:gerow@usc.edu?subject=Hello}{gerow@usc.edu}}
+\newcommand{\email}{\href{mailto:m@mgerow.com?subject=Hello}{m@mgerow.com}}
 \newcommand{\linkedin}{\href{http://www.linkedin.com/in/gerow}{http://www.linkedin.com/in/gerow}}
 \newcommand{\website}{\href{http://mgerow.com}{http://mgerow.com}}
 
@@ -32,7 +32,7 @@
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
 	\vspace{4pt}
-	{\fontfamily{phv}\selectfont\Large#1}
+	{\fontfamily{phv}\selectfont\large#1}
 	\begin{itemize}
 	\vspace{3pt}
 }{
@@ -40,7 +40,7 @@
 }
 
 \newcommand{\resplainsection}[1]{
-	{\fontfamily{phv}\selectfont\Large#1}
+	{\fontfamily{phv}\selectfont\large#1}
 	\vspace{-12pt}
 	\\
 
@@ -136,7 +136,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \resplainsection{Professional Summary}
-	A National Merit Scholar Computer Engineering and Computer Science student at USC with over four years of programming experience and nearly a year of experience working in a professional setting including working on internal IT applications and embedded set top box applications.  A two year member of the USC Autonomous Underwater Vehicle team competing in the AUVSI RoboSub event.
+	A National Merit Scholar Computer Engineering and Computer Science student at USC with over four years of programming experience and over a year of experience working in a professional setting including working on IT applications/tools and embedded set top box applications.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education}
@@ -151,9 +151,9 @@
 
 \begin{ressection}{Technical Summary}
 
-	\resitem{\textbf{Languages:} C, C++, Java, Go, Python, Verilog, \LaTeX, Motorola 68000 Assembly }
-	\resitem{\textbf{Libraries/Frameworks:} OpenGL, ROS (Robot Operating System), OpenCV, Berkeley Sockets }
-	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, MongoDB, MySQL, Eclipse, Multithreaded Environments (Using Agents)}
+	\resitem{\textbf{Languages:} C, Ruby, C++, Java, Go, Python, Verilog, \LaTeX, Motorola 68000 Assembly, Clojure, Perl}
+	\resitem{\textbf{Libraries/Frameworks:} Ruby on Rails, OpenGL, ROS (Robot Operating System), OpenCV, Berkeley Sockets }
+	\resitem{\textbf{Systems/Tools:} Linux and Unix variants (Debian, Ubuntu, Solaris, FreeBSD), OSX, Windows 2000/XP/Vista/7, SVN, Git, Mercurial, MongoDB, MySQL, Eclipse, Multithreaded Environments (Using Agents), Puppet, CouchDB, Apache, SLURM, Request Tracker}
 	
 \end{ressection}
 
@@ -166,13 +166,21 @@
 	%\begin{ressubsec}{Car Country}{Tulsa, OK}{Currier December 2010--January 2011 (Winter Break)}
 	%	\ressubitem{Transported documents and payments to and from businesses and banks.}
 	%\end{ressubsec}
+        \begin{ressubsec}{Information Sciences Institute}{Marina del Rey, CA}{Student Worker August 2013--Present}
+                \ressubitem{Work on fitting virtual disk images into the current FreeBSD based disk image system for DeterLab \url{https://www.isi.deterlab.net} called Frisbee \url{http://www.cs.utah.edu/flux/papers/frisbee-usenix03-base.html}}
+        \end{ressubsec}
+        \begin{ressubsec}{SpaceX}{Hawthorne, CA}{Linux IT Intern May 2013--August 2013}
+                \ressubitem{Working with Puppet backend to create a distributed report collection and node classification service in order to allow these activities to continue even if links between locations are down}
+                \ressubitem{Developing a service to analyze and get statistics on tickets for the RT ticketing system}
+                \ressubitem{Developing tools to help analyze high performance computing cluster usage on a SLURM cluster}
+        \end{ressubsec}
 	\begin{ressubsec}{DIRECTV}{El Segundo, CA}{Software Engineering Intern May 2012--August 2012}
 		\ressubitem{Embedded systems work with set top box UI in Java}
-		\ressubitem{Created tool to increase productivity when working with set top box assets}
+		\ressubitem{Creating a tool to increase productivity when working with set top box assets}
 	\end{ressubsec}
 	\begin{ressubsec}{Nelson Auto Group}{Tulsa, OK}{Information Technology Intern May 2011--August 2011, December 2011--January 2012}
-		\ressubitem{Created a system to effectively and efficiently keep copies of all physical media needed for the company's computer and technical systems.}
-		\ressubitem{Created a system to allow managers to easily access recorded calls through a web interface using PHP to access Asterisk servers.}
+		\ressubitem{Creating a system to effectively and efficiently keep copies of all physical media needed for the company's computer and technical systems}
+		\ressubitem{Creating a system to allow managers to easily access recorded calls through a web interface using PHP to access Asterisk servers}
 	\end{ressubsec}
 
 	%\resbigitem{Christ the King Parish}{Tulsa, OK}{Maintainance:  March 2008--August 2010}
@@ -188,24 +196,27 @@
 
 \end{ressection}
 
+\pagebreak
+
 \begin{ressection}{Projects Outside of School}
     \begin{resveryshortsubsec}{Projects Created/Forked}
-        \ressubitem{\emph{Boop}: Lightweight Go server for running commands in response HTTP actions.  Very good for throwing together quick solutions when needed. \url{https://github.com/gerow/boop}}
+        \ressubitem{\emph{Boop}: Lightweight Go server for running commands in response HTTP actions.  Very good for throwing together quick solutions when necessary. \url{https://github.com/gerow/boop}}
         \ressubitem{\emph{gnome-shell-google-calendar}: Fork of script to allow Google Calendar integration into GNOME 3. Added ability to use within GNOME 3 under Ubuntu. \url{https://github.com/gerow/gnome-shell-google-calendar}}
-        \ressubitem{\emph{btcreg}: A service for aliasing bitcoin addresses agains email addresses. Mainly created in order to play around with creating database driven web applications using Go and MongoDB.  \url{https://github.com/gerow/btcreg}}
-        \ressubitem{\emph{This Resume}: Yes, even this resume is written in \LaTeX. \url{https://github.com/gerow/resume}}
+        %\ressubitem{\emph{btcreg}: A service for aliasing bitcoin addresses agains email addresses. Mainly created in order to play around with creating database driven web applications using Go and MongoDB.  \url{https://github.com/gerow/btcreg}}
+        \ressubitem{\emph{Resume}: This resume is written in \LaTeX. \url{https://github.com/gerow/resume}}
     \end{resveryshortsubsec}
     \begin{resveryshortsubsec}{Projects Done With Others}
-        \ressubitem{\emph{LittleNote}: An iPhone app for sending notes to your significant other.  Worked on backend side implemented as a Ruby on Rails application. \url{https://github.com/kcbarry/LittleNoteWeb}}
+        \ressubitem{\emph{LittleNote}: An iPhone app for sending notes to your significant other.  Working on backend implemented as a Ruby on Rails application. \url{https://github.com/kcbarry/LittleNoteWeb}}
     \end{resveryshortsubsec}
     \begin{resveryshortsubsec}{Projects Contributed To}
         \ressubitem{\emph{Goose}: Database migration tool for Go. Added sqlite3 support. Currently working on support for applications that wish to target multiple database types. \url{https://bitbucket.org/liamstask/goose}}
+        \ressubitem{\emph{rest-client}: A REST library for ruby.  Created patch to fix issue with headers being automatically renamed when they shouldn't be. \url{https://github.com/rest-client/rest-client}}
     \end{resveryshortsubsec}
 \end{ressection}
 
 \begin{ressection}{Club Experience}
 	\begin{ressubsec}{USC Autonomous Underwater Vehicle Team}{Los Angeles, CA}{Member of Software Team September 2010--May 2012}
-		\ressubitem{Wrote C++ code for robot running within the ROS environment under Ubuntu.}
+		\ressubitem{Wriging C++ code for robot running within the ROS environment under Ubuntu.}
 		\ressubitem{Gained experience working with vision processing using OpenCV.}
 	\end{ressubsec}
 \end{ressection}
